@@ -7,5 +7,4 @@ void main() {
 
     System.out.println(myBus.toString());
     System.out.println(myCar.toString());
-
 }

@@ -15,4 +15,5 @@ public class Car extends Vehicle{
         //Insurance fee = 5% of base price per year of vehicle age + extra $100 per door
         return basePrice * 0.05 * age + numberOfDoors * 100;
     }
+
 }

@@ -61,3 +61,4 @@ public abstract class Vehicle {
         return("ID: " + this.id + "\nModel: " + this.model + "\nYear: " + this.year + "\nBase Price: " + this.basePrice);
     }
 }
+
