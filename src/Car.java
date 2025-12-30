@@ -16,4 +16,16 @@ public class Car extends Vehicle{
         return basePrice * 0.05 * age + numberOfDoors * 100;
     }
 
+    @Override
+    public void performService(){
+        System.out.println("Car service for: " + getModel());
+        System.out.println("- Changing engine oil");
+        System.out.println("- Washing the car");
+    }
+
+    @Override
+    public int getServiceIntervalKm() {
+        return 10000; //Car needs service every 10,000 km
+    }
+
 }

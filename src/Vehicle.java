@@ -1,4 +1,4 @@
-public abstract class Vehicle {
+public abstract class Vehicle implements Servicable {
     protected  int id;
     protected static int idGen = 1;
     protected String model;
@@ -7,7 +7,7 @@ public abstract class Vehicle {
 
     //constructor
     Vehicle(String model, int year, double basePrice) {
-        idGen += idGen; //automatic
+        this.id = idGen++; //automatic
         setModel(model);
         setYear(year);
         setBasePrice(basePrice);
@@ -15,7 +15,7 @@ public abstract class Vehicle {
 
     //setters
     protected void setModel(String model) {
-        if(model.isEmpty() || model == null)
+        if(model == null || model.isEmpty())
         {
             throw new IllegalArgumentException("Please enter the model");
         }
@@ -52,9 +52,7 @@ public abstract class Vehicle {
         return age;
     }
 
-    public double calculateInsuranceFee(){
-        return 0;
-    }
+    public abstract double calculateInsuranceFee();
 
     @Override
     public String toString() {
